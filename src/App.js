@@ -1,10 +1,9 @@
-import DemoComponent from "./DemoComponent";
-
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div>
-   <DemoComponent />
+    <div className="bg-[#E1EEFF] max-w-[1440px] mx-auto">
+      <Footer />
     </div>
   );
 }
