@@ -1,9 +1,9 @@
-import React from "react";
-import Logo from "../../images/PayPal-icon-white-png-vertical.png";
+import { faBell, faCog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog, faBell } from "@fortawesome/free-solid-svg-icons";
-import DrawerRoute from "./DrawerRoute";
+import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../images/PayPal-icon-white-png-vertical.png";
+import DrawerRoute from "./DrawerRoute";
 
 const NavBar = () => {
   return (
@@ -20,7 +20,9 @@ const NavBar = () => {
                   src={Logo}
                   alt=""
                 />
-                <h1 className="italic">Pay<span className="text-[#08A0E1]">pal</span></h1>
+                <h1 className="italic">
+                  Pay<span className="text-[#08A0E1]">pal</span>
+                </h1>
               </div>
             </Link>
           </div>
@@ -28,32 +30,34 @@ const NavBar = () => {
       </div>
       <nav className="hidden md:flex items-center justify-between  px-4 py-2 text-[#D3F1FF] hover:text-white">
         <div className="scale-100 rounded-2xl px-3 text-sm py-4  text-[#D3F1FF] hover:text-white flex items-center text-center justify-center gap-5">
+        <Link to="/">
           <img
             className="w-6 text-[#D3F1FF] hover:text-white"
             src={Logo}
             alt=""
           />
+          </Link>
           <ul className="flex items-center justify-between gap-2 text-slate-900">
             <li className="cursor-pointer  rounded-full  px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600 ">
-              Dashboard
+              <Link to={"/dashboard"}>Dashboard</Link>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              Finances
+              <Link to={"/dashboard"}>Finances</Link>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              Send and Request
+              <Link to={"/dashboard"}>Send and Request</Link>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              Deals
+              <Link to={"/dashboard"}>Deals</Link>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              Wallet
+              <Link to={"/dashboard"}>Wallet</Link>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              Activity
+              <Link to={"/dashboard"}>Activity</Link>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              Help
+              <Link to={"/dashboard"}>Help</Link>
             </li>
           </ul>
         </div>

@@ -3,7 +3,7 @@ import NameLogo from "../../images/PAYPAL_LOGO_480x480.webp";
 const Footer = () => {
   return (
     <footer className="flex flex-col">
-      <div className="flex flex-col gap-5 bg-white py-4 md:px-10 lg:px-32 rounded-t-2xl md:flex-row md:gap-16 items-center shadow-xl border-b-4 border-yellow-50">
+      <div className="flex flex-col gap-5 bg-white py-4 md:px-10 lg:px-32 rounded-t-xl md:flex-row md:gap-16 items-center shadow-xl border-b-4 border-yellow-50">
         <aside className="flex items-center justify-center gap-3 text-xl">
           <img className="w-32" src={NameLogo} alt="" />
         </aside>
@@ -28,7 +28,7 @@ const Footer = () => {
           </ul>
         </nav>
       </div>
-      <aside className="bg-white text-center text-sm flex flex-col gap-5 py-5 md:px-10 lg:px-32  md:flex-row md:gap-16 items-center">
+      <aside className="bg-white text-center text-sm flex flex-col gap-5 py-5 md:py-8 lg:py-10 md:px-10 lg:px-32  md:flex-row md:gap-16 items-center">
         <p className="text-[#9e9d9d]">
           &copy; 1999-2022 PayPal, Inc. All Rights Reserved.
         </p>
