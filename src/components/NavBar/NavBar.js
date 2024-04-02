@@ -1,13 +1,13 @@
 import { faBell, faCog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../../images/PayPal-icon-white-png-vertical.png";
 import DrawerRoute from "./DrawerRoute";
 
 const NavBar = () => {
   return (
-    <div className="">
+    <>
       <div className=" flex items-center justify-between md:hidden  h-16 ">
         <div className="flex justify-start items-center">
           <DrawerRoute></DrawerRoute>
@@ -30,34 +30,34 @@ const NavBar = () => {
       </div>
       <nav className="hidden md:flex items-center justify-between  px-4 py-2 text-[#D3F1FF] hover:text-white">
         <div className="scale-100 rounded-2xl px-3 text-sm py-4  text-[#D3F1FF] hover:text-white flex items-center text-center justify-center gap-5">
-        <Link to="/">
-          <img
-            className="w-6 text-[#D3F1FF] hover:text-white"
-            src={Logo}
-            alt=""
-          />
+          <Link to="/">
+            <img
+              className="w-6 text-[#D3F1FF] hover:text-white"
+              src={Logo}
+              alt=""
+            />
           </Link>
           <ul className="flex items-center justify-between gap-2 text-slate-900">
             <li className="cursor-pointer  rounded-full  px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600 ">
-              <Link to={"/dashboard"}>Dashboard</Link>
+              <NavLink to={"/dashboard"}>Dashboard</NavLink>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              <Link to={"/dashboard"}>Finances</Link>
+              <NavLink to={"/dashboard"}>Finances</NavLink>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              <Link to={"/dashboard"}>Send and Request</Link>
+              <NavLink to={"/dashboard"}>Send and Request</NavLink>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              <Link to={"/dashboard"}>Deals</Link>
+              <NavLink to={"/dashboard"}>Deals</NavLink>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              <Link to={"/dashboard"}>Wallet</Link>
+              <NavLink to={"/dashboard"}>Wallet</NavLink>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              <Link to={"/dashboard"}>Activity</Link>
+              <NavLink to={"/dashboard"}>Activity</NavLink>
             </li>
             <li className="cursor-pointer  rounded-full px-6 py-2 text-[#D3F1FF] hover:text-white hover:bg-sky-600">
-              <Link to={"/dashboard"}>Help</Link>
+              <NavLink to={"/dashboard"}>Help</NavLink>
             </li>
           </ul>
         </div>
@@ -73,7 +73,7 @@ const NavBar = () => {
           </li>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 

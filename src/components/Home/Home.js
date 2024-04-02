@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
+    <div className="mx-1">
     <div className="pt-1 pb-8 px-5  max-w-[400px] font-sans space-y-4 mt-3 mb-10 md:mb-20 lg:mb-40 flex flex-col justify-center items-center mx-auto bg-white">
       <div className="relative group">
         <FontAwesomeIcon
@@ -41,6 +42,7 @@ const Home = () => {
       <button className="hover:bg-[#0070B8] hover:scale-95 font-medium hover:text-white w-full py-2 rounded-full hover:shadow-xl shadow-[0px_0px_10px_#E2DADA] border border-[#0070B8] duration-500">
         <Link to={"/dashboard"}>Return to Dashboard</Link>
       </button>
+    </div>
     </div>
   );
 };

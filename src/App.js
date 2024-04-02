@@ -1,15 +1,22 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
+  const location = useLocation();
+
+  const isDashboardRoute = location.pathname === "/dashboard";
+
   return (
-    <div className="bg-[#E1EEFF] max-w-[1440px] mx-auto">
+    <div
+      className={`max-w-[1440px] mx-auto ${
+        isDashboardRoute ? "bg-white" : "bg-[#E1EEFF]"
+      }`}
+    >
       <div className="bg-[#152B8E] md:px-16 lg:px-24">
         <NavBar />
       </div>
-      <div className="mx-1">
+      <div className="">
         <Outlet />
       </div>
       <Footer />
